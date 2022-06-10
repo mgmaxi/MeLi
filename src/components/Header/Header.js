@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './header.css';
 import FullLogo from '../../assets/images/full-logo.png';
 import Logo from '../../assets/images/logo.png';
@@ -8,18 +9,30 @@ import { FiMapPin } from 'react-icons/fi';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { BsCart2 } from 'react-icons/bs';
 
-const Navbar = () => {
+const Navbar = ({ onHandleSubmit }) => {
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const query = event.target.elements.search.value;
+    await onHandleSubmit(query);
+  }
   return (
     <>
       <header>
         <div className="header-main">
-          <img src={FullLogo} alt="" className="full-logo" />
-          <img src={Logo} alt="" className="logo" />
-          <form action="" className="header-main-form">
+          <Link to="/">
+            <img
+              src={FullLogo}
+              alt="Full logo Mercado Libre"
+              className="full-logo"
+            />
+          </Link>
+          <img src={Logo} alt="Logo Mercado Libre" className="logo" />
+          <form onSubmit={handleSubmit} className="header-main-form">
             <input
+              id="search"
               type="search"
               className="search"
-              placeholder="Buscar productos, marcas y más.."
+              placeholder="Buscar productos, marcas y más..."
             />
             <button type="submit" className="search-btn">
               <IoIosSearch />

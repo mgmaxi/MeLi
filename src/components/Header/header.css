@@ -23,6 +23,7 @@ header {
   cursor: pointer;
   width: 134px;
 }
+
 .logo {
   display: none;
 }
@@ -43,6 +44,12 @@ header {
   height: 40px;
   width: 598px;
   border: none;
+}
+
+.search::placeholder {
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .search-btn {
@@ -141,7 +148,6 @@ header {
 .header-menu-navbar ul li a {
   padding-right: 18px;
   color: rgba(51, 51, 51, 0.6);
-  text-decoration: none;
   transition: color 0.3s ease-out;
 }
 
@@ -149,7 +155,6 @@ header {
 .header-menu-navbar ul li a:focus,
 .header-menu-navbar ul li a:hover {
   color: rgba(51, 51, 51, 0.9);
-  text-decoration: none;
 }
 
 .header-menu-profile {

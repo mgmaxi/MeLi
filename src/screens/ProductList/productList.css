@@ -1,0 +1,11 @@
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.product-list-container {
+  width: 835px;
+}
