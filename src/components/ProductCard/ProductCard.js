@@ -10,7 +10,6 @@ const ProductCard = ({ product }) => {
     }).format(price);
   }
 
-  console.log(product);
   return (
     <div key={product.id} className="product-container">
       <Link to={`/products/${product.id}`} className="product-image-container">

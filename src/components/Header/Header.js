@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './header.css';
 import FullLogo from '../../assets/images/full-logo.png';
 import Logo from '../../assets/images/logo.png';
@@ -9,12 +9,15 @@ import { FiMapPin } from 'react-icons/fi';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { BsCart2 } from 'react-icons/bs';
 
-const Navbar = ({ onHandleSubmit }) => {
-  async function handleSubmit(event) {
+const Navbar = () => {
+  const navigate = useNavigate();
+
+  function handleSubmit(event) {
     event.preventDefault();
     const query = event.target.elements.search.value;
-    await onHandleSubmit(query);
+    navigate('/products', { state: { query: query } });
   }
+
   return (
     <>
       <header>

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { getProducts } from '../../services/Products';
 import './products.css';
 import Header from '../../components/Header/Header';
@@ -7,29 +8,30 @@ import SearchNotFound from '../../components/SearchNotFound/SearchNotFound';
 
 const Products = () => {
   const [productList, setProductList] = useState([]);
+  const { state } = useLocation();
 
-  function handleSubmit(query) {
+  useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await getProducts(query);
+        const response = await getProducts(state.query);
         setProductList(response.data.results);
       } catch (error) {
         console.log(error);
       }
     };
-    fetchData();
-  }
+    state && fetchData();
+  }, [state]);
 
   return (
     <>
-      <Header onHandleSubmit={handleSubmit} />
+      <Header />
       <main>
         <div className="product-list-container">
           {productList.length === 0 ? (
             <SearchNotFound />
           ) : (
             productList.map((product) => {
-              return <ProductCard product={product} />;
+              return <ProductCard key={product.id} product={product} />;
             })
           )}
         </div>

@@ -4,7 +4,6 @@ import { BsHeart, BsTruck } from 'react-icons/bs';
 
 const ProductDetail = ({ product }) => {
   const [currentImage, setCurrentImage] = useState(product.pictures[0].url);
-  console.log(product);
 
   function formatPrice(price, currency) {
     return new Intl.NumberFormat('ES-AR', {
