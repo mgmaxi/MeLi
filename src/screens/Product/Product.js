@@ -4,6 +4,7 @@ import { getProduct } from '../../services/Products';
 import './product.css';
 import ProductDetail from '../../components/ProductDetail/ProductDetail';
 import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 
 const Product = () => {
   const [product, setProduct] = useState();
@@ -27,6 +28,7 @@ const Product = () => {
       <main>
         {product ? <ProductDetail product={product} /> : 'no hay producto'}
       </main>
+      <Footer />
     </>
   );
 };

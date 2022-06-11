@@ -1,0 +1,45 @@
+.carousel-container {
+  width: 100%;
+  text-align: center;
+}
+
+.carousel-image {
+  height: 340px;
+  width: 100%;
+  max-width: 1600px;
+  object-fit: cover;
+}
+
+.swiper-button-prev {
+  left: -2px !important;
+  background-image: url('../../assets/images/arrow-left.png');
+}
+
+.swiper-button-next {
+  right: -2px !important;
+  background-image: url('../../assets/images/arrow-right.png');
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  border: 1px solid rgba(255, 255, 255) !important;
+  background-color: rgba(0, 0, 0) !important;
+}
+
+.swiper-pagination-bullet-active {
+  border: 1px solid rgba(0, 0, 0, 0.45) !important;
+  background-color: rgb(255, 255, 255) !important;
+  transition: background-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out,
+    -webkit-box-shadow 0.35s ease-in-out;
+}

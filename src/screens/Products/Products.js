@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { getProducts } from '../../services/Products';
 import './products.css';
 import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import SearchNotFound from '../../components/SearchNotFound/SearchNotFound';
 
@@ -36,6 +37,7 @@ const Products = () => {
           )}
         </div>
       </main>
+      <Footer />
     </>
   );
 };

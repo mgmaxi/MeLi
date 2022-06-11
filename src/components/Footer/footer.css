@@ -1,0 +1,17 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #ce0917;
+}
+
+h2 {
+  font-size: 28px;
+  margin: 8px 0 2px 0;
+}
+
+p {
+  margin: 2px 0 8px 0;
+}
