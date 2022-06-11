@@ -1,5 +1,5 @@
 import React from 'react';
-import './SearchNotFound.css';
+import './searchNotFound.css';
 import search from '../../assets/images/search.png';
 
 const SearchNotFound = () => {

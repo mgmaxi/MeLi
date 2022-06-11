@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Header from '../../components/Header/Header';
-import Product from '../../components/Product/Product';
-import './productList.css';
 import { getProducts } from '../../services/Products';
+import './products.css';
+import Header from '../../components/Header/Header';
+import ProductCard from '../../components/ProductCard/ProductCard';
 import SearchNotFound from '../../components/SearchNotFound/SearchNotFound';
 
 const Products = () => {
@@ -29,7 +29,7 @@ const Products = () => {
             <SearchNotFound />
           ) : (
             productList.map((product) => {
-              return <Product product={product} />;
+              return <ProductCard product={product} />;
             })
           )}
         </div>

@@ -4,7 +4,6 @@ header {
   justify-content: center;
   align-items: center;
   padding: 0 5px;
-  width: 100vw;
   height: 100px;
   background-color: #fff159;
 }
@@ -13,8 +12,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 5px 0;
+  padding: 5px 0 00;
   width: 80%;
+  height: 50px;
   max-width: 1200px;
   color: #333;
 }
@@ -91,8 +91,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 5px 0;
+  padding: 0 0 5px 0;
   width: 80%;
+  height: 50px;
   max-width: 1200px;
   font-size: 14px;
 }
