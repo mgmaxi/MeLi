@@ -1,0 +1,46 @@
+.home-main {
+  flex-direction: column;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 15px auto;
+  width: 80%;
+  height: 400px;
+  max-width: 1200px;
+}
+
+.section-title {
+  margin-left: 5px;
+  align-self: flex-start;
+  font-size: 26px;
+  font-weight: 300;
+  color: #666;
+  line-height: 1.2;
+}
+
+.cards-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.benefits-section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 15px auto;
+  width: 80%;
+  height: 300px;
+  max-width: 1200px;
+}
+
+.benefits-card {
+  margin: 5px;
+  border-radius: 8px;
+}

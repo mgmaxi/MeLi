@@ -1,0 +1,58 @@
+.card-vertical-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  width: 224px;
+  height: auto;
+  min-height: 330px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.18s ease-out;
+}
+
+.card-vertical-container:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-vertical-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.card-vertical-image {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.card-vertical-divider {
+  width: 100%;
+  border-top: 0.5px solid rgb(0, 0, 0, 0.2);
+}
+
+.card-vertical-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+}
+
+.card-vertical-title {
+  margin: 0 10px 5px 10px;
+  min-height: 65px;
+  text-align: center;
+  color: rgb(116, 116, 116);
+  font-size: 15px;
+  font-weight: 100;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-vertical-container:hover > .card-vertical-title {
+  white-space: unset;
+}

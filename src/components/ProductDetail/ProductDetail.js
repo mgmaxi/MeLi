@@ -32,7 +32,6 @@ const ProductDetail = ({ product }) => {
           <div className="product-detail-main-image">
             <img src={currentImage} alt={product.title} />
           </div>
-
           <div className="product-detail-info-container">
             <div className="product-detail-info">
               <span className="product-detail-info-condition">
@@ -41,7 +40,6 @@ const ProductDetail = ({ product }) => {
               </span>
               <BsHeart className="heart-icon" />
               <h3 className="product-detail-info-title">{product.title}</h3>
-
               <span className="product-detail-info-price">
                 {!product.original_price ? (
                   ''

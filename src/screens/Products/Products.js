@@ -27,7 +27,7 @@ const Products = () => {
     <>
       <Header />
       <main>
-        <div className="product-list-container">
+        <section className="product-list-container">
           {productList.length === 0 ? (
             <SearchNotFound />
           ) : (
@@ -35,7 +35,7 @@ const Products = () => {
               return <ProductCard key={product.id} product={product} />;
             })
           )}
-        </div>
+        </section>
       </main>
       <Footer />
     </>
