@@ -13,11 +13,18 @@
 .swiper-button-prev {
   left: -2px !important;
   background-image: url('../../assets/images/arrow-left.png');
+  transition: all 0.25s ease-in-out;
 }
 
 .swiper-button-next {
   right: -2px !important;
   background-image: url('../../assets/images/arrow-right.png');
+  transition: all 0.25s ease-in-out;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0, 0.25));
 }
 
 .swiper-button-next,

@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper';
+
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Carousel from '../../components/Carousel/Carousel';
@@ -40,18 +43,52 @@ const Home = () => {
         <section className="section-container">
           <h2 className="section-title">Televisores</h2>
           <div className="cards-row">
-            {televisionsList.slice(0, 5).map((product) => {
-              return <ProductCardVertical key={product.id} product={product} />;
-            })}
+            <Swiper
+              modules={[Navigation]}
+              navigation
+              speed={800}
+              className="swiper swiper-row"
+              breakpoints={{
+                640: {
+                  width: 1200,
+                  slidesPerView: 5,
+                },
+              }}
+            >
+              {televisionsList.slice(0, 15).map((product) => {
+                return (
+                  <SwiperSlide className="swiperslide">
+                    <ProductCardVertical key={product.id} product={product} />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
           </div>
         </section>
 
         <section className="section-container">
           <h2 className="section-title">Muebles</h2>
           <div className="cards-row">
-            {furnitureList.slice(0, 5).map((product) => {
-              return <ProductCardVertical key={product.id} product={product} />;
-            })}
+            <Swiper
+              modules={[Navigation]}
+              navigation
+              speed={800}
+              className="swiper swiper-row"
+              breakpoints={{
+                640: {
+                  width: 1200,
+                  slidesPerView: 5,
+                },
+              }}
+            >
+              {furnitureList.slice(0, 15).map((product) => {
+                return (
+                  <SwiperSlide className="swiperslide">
+                    <ProductCardVertical key={product.id} product={product} />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
           </div>
         </section>
 
@@ -79,9 +116,26 @@ const Home = () => {
         <section className="section-container">
           <h2 className="section-title">Computación</h2>
           <div className="cards-row">
-            {computingList.slice(0, 5).map((product) => {
-              return <ProductCardVertical key={product.id} product={product} />;
-            })}
+            <Swiper
+              modules={[Navigation]}
+              navigation
+              speed={800}
+              className="swiper swiper-row"
+              breakpoints={{
+                640: {
+                  width: 1200,
+                  slidesPerView: 5,
+                },
+              }}
+            >
+              {computingList.slice(0, 15).map((product) => {
+                return (
+                  <SwiperSlide className="swiperslide">
+                    <ProductCardVertical key={product.id} product={product} />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
           </div>
         </section>
       </main>

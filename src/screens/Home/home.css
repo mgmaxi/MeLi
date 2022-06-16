@@ -24,8 +24,9 @@
 
 .cards-row {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -36,11 +37,23 @@
   align-items: center;
   margin: 15px auto;
   width: 80%;
-  height: 300px;
+  height: auto;
+  min-height: 300px;
   max-width: 1200px;
 }
 
 .benefits-card {
   margin: 5px;
   border-radius: 8px;
+}
+
+.swiper-row {
+  padding: 25px 5px;
+}
+
+.swiperslide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 2px;
 }

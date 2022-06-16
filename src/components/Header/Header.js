@@ -29,7 +29,10 @@ const Navbar = () => {
               className="full-logo"
             />
           </Link>
-          <img src={Logo} alt="Logo Mercado Libre" className="logo" />
+          <Link to="/">
+            <img src={Logo} alt="Logo Mercado Libre" className="logo" />
+          </Link>
+
           <form onSubmit={handleSubmit} className="header-main-form">
             <input
               id="search"
