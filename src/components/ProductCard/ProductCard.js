@@ -20,7 +20,9 @@ const ProductCard = ({ product }) => {
         />
       </Link>
       <div className="product-info">
-        <h3 className="product-info-title">{product.title}</h3>
+        <Link to={`/products/${product.id}`}>
+          <h3 className="product-info-title">{product.title}</h3>
+        </Link>
         <a href={product.seller.permalink} className="product-info-seller">
           {!product.seller.eshop
             ? ''

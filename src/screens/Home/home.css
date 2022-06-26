@@ -16,6 +16,7 @@
 .section-title {
   margin-left: 5px;
   align-self: flex-start;
+  width: 100%;
   font-size: 26px;
   font-weight: 300;
   color: #666;
@@ -56,4 +57,10 @@
   justify-content: center;
   align-items: center;
   padding: 0px 2px;
+}
+
+@media only screen and (max-width: 1473px) {
+  .section-title {
+    text-align: center;
+  }
 }
