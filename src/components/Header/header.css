@@ -87,6 +87,21 @@ header {
   display: none;
 }
 
+.cart-container{
+  position: relative;
+  width: 20px;
+}
+
+.cart-product-quantity{
+  position: absolute;
+  top: -9px;
+  left: 0 auto;
+  right: 0 auto;
+  width: 22.5px;
+  font-size: 12px;
+  text-align: center;
+}
+
 .header-menu {
   display: flex;
   justify-content: space-between;
