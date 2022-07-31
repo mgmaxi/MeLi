@@ -11,8 +11,8 @@ Features:
 - Home
 - Navigation bar with product search
 - /products (displays the list of products that are consulted in the search engine)
-- /products/id (displays the detail of a product)
-- /cart (feature with two sections "cart" and "saved". You can add products to the cart, select the quantity of the product, delete the product, change to the saved product section and get the total of the porchase. The saved section is for save products for buy it in another moment. )
+- /products/id (displays the detail of a product, Q&A section where you can add a question)
+- /cart (function with two sections "cart" and "saved". You can add products to the cart, select the quantity of the product, delete the product, switch to the section of saved products and get the total of the purchase. The "saved" section is for saving the products you are interested in for purchase it later.
 
 ## 🛠️ <b> Technologies </b>
 

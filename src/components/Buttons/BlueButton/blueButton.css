@@ -1,0 +1,20 @@
+.blue-btn {
+    display: block;
+    margin: 8px 0 0 0;
+    padding: 0 24px;
+    width: 275px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #3483fa;
+    border-color: transparent;
+    border-radius: 6px;
+    box-shadow: 0 0 0 0 #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+  }
+  
+  .blue-btn:hover {
+    background-color: rgb(41, 104, 200);
+  }

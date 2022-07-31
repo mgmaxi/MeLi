@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './productDetail.css';
 import { BsHeart, BsTruck } from 'react-icons/bs';
+import Coments from '../../components/Coments/Coments';
 
 const ProductDetail = ({ product }) => {
 	const [currentImage, setCurrentImage] = useState(product.pictures[0].url);
@@ -119,6 +120,7 @@ const ProductDetail = ({ product }) => {
 				<div className="product-detail-secondary-row">
 					<p className="product-detail-description"></p>
 				</div>
+				<Coments />
 			</div>
 		</>
 	);
