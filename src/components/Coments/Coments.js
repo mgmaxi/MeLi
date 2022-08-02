@@ -33,33 +33,37 @@ const Coments = () => {
 		return;
 	};
 
+	const generateId = () => {
+		return Math.floor(Math.random() * Date.now());
+	};
+
 	return (
 		<>
 			<section className="QaA-container">
 				<h2 className="QaA-title">Preguntas y respuestas</h2>
-				<h3 className="QaA-subTitle">Pregunta lo que querés saber</h3>
+				<h3 className="QaA-subTitle">Preguntale al vendedor</h3>
 				<form className="QaA-form" onSubmit={addQuestion}>
 					<textarea
 						className="QaA-input"
 						id="questionInput"
 						type="text"
 						row="1"
-						maxlength="120"
-						placeholder="Escribí una pregunta o palabra clave..."
+						maxLength="120"
+						placeholder="Escribí tu pregunta..."
 					/>
-					<BlueButton text={'Enviar pregunta'} />
+					<BlueButton text={'Preguntar'} />
 				</form>
 
 				<h3 className="QaA-subTitle">Últimas realizadas</h3>
 				<div className="QaA-list">
 					{questionsAnswers.map(QaA => (
-						<>
+						<div key={generateId()}>
 							<p className="QaA-question">{QaA.question}</p>
 							<div className="QaA-answer-container">
 								<span>L</span>
 								<p>{QaA.answer}</p>
 							</div>
-						</>
+						</div>
 					))}
 				</div>
 			</section>

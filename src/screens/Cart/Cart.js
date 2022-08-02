@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './cart.css';
 import CartList from '../../components/CartList/CartList';
 import Header from '../../components/Header/Header';
@@ -79,13 +78,13 @@ const Cart = () => {
 					<section className="cart">
 						<h2 className="cart-title">
 							<span
-								className={cartShow && 'cart-title-active'}
+								className={cartShow ? 'cart-title-active' : undefined}
 								onClick={() => setCartShow(true)}
 							>
 								Carrito ({cart.length})
 							</span>
 							<span
-								className={!cartShow && 'cart-title-active'}
+								className={!cartShow ? 'cart-title-active' : undefined}
 								onClick={() => setCartShow(false)}
 							>
 								Guardados ({savedProduct.length})

@@ -1,0 +1,46 @@
+
+
+.filters{
+    margin: 15px 0;
+    padding: 0 8px;
+    width: 200px;
+  }
+  
+  .query-title{
+    color: #333;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 30px;
+    padding-right: 16px;
+  }
+
+  .query-results{
+    bottom: 2px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.29;
+    position: relative;
+  }
+
+  .condition-filter{
+    margin: 20px 0 10px 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .filter-btn{
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    text-align: left ;
+  }

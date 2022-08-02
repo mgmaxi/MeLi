@@ -5,6 +5,7 @@ import './product.css';
 import ProductDetail from '../../components/ProductDetail/ProductDetail';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import SearchNotFound from '../../components/SearchNotFound/SearchNotFound';
 
 const Product = () => {
 	const [product, setProduct] = useState();
@@ -26,11 +27,7 @@ const Product = () => {
 		<>
 			<Header />
 			<main>
-				{product ? (
-					<ProductDetail product={product} />
-				) : (
-					'No existe el producto.'
-				)}
+				{product ? <ProductDetail product={product} /> : <SearchNotFound />}
 			</main>
 			<Footer />
 		</>
