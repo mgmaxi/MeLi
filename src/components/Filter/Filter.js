@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './filter.css';
 
 const Filter = ({ state, products, onProductsFiltered }) => {
+	const [filterActive, setFilterActive] = useState(true);
+
 	const filterResultsByFreeShipping = shipping => {
 		let product = products.filter(
 			product => product.shipping.free_shipping === shipping
@@ -87,7 +89,13 @@ const Filter = ({ state, products, onProductsFiltered }) => {
 	};
 
 	return (
-		<div className="filters">
+		<div className={filterActive ? 'filters' : 'filters hideFilter'}>
+			<span
+				className="close-btn"
+				onClick={() => setFilterActive(!filterActive)}
+			>
+				{filterActive ? 'X' : '>'}
+			</span>
 			<h2 className="query-title">
 				{state.charAt(0).toUpperCase() + state.slice(1)}
 			</h2>
