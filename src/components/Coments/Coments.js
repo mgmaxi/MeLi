@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 import BlueButton from '../Buttons/BlueButton/BlueButton';
 import './coments.css';
 
@@ -25,11 +26,11 @@ const Coments = () => {
 		e.preventDefault();
 		let question = e.target.questionInput.value;
 		!question
-			? alert('El campo no puede estar vacío')
+			? toast.warn('El campo no puede estar vacío')
 			: setQuestionsAnswers([
 					{ question, answer: 'El vendedor suele responder en 24hs.' },
 					...questionsAnswers,
-			  ]);
+			  ])(toast.success('¡Su pregunta ha sido agregada con éxito!'));
 		return;
 	};
 

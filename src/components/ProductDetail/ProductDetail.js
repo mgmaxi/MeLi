@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './productDetail.css';
 import { BsHeart, BsTruck } from 'react-icons/bs';
 import Coments from '../../components/Coments/Coments';
+import { toast } from 'react-toastify';
+import './productDetail.css';
 
 const ProductDetail = ({ product }) => {
 	const [currentImage, setCurrentImage] = useState(product.pictures[0].url);
@@ -20,7 +21,7 @@ const ProductDetail = ({ product }) => {
 	function handleAddToCart() {
 		cart.some(cartProduct => cartProduct.id === product.id) ||
 		savedProduct.some(savedProduct => savedProduct.id === product.id)
-			? alert(
+			? toast.warn(
 					'Este producto ya se encuentra en el carrito de compras o guardado.'
 			  )
 			: setCart([
@@ -29,7 +30,9 @@ const ProductDetail = ({ product }) => {
 						...product,
 						cart_quantity: 1,
 					},
-			  ]);
+			  ])(
+					toast.success('El producto ha sido agregado al carrito de compras.')
+			  );
 	}
 
 	function formatPrice(price, currency) {
